@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539496038398.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B75298B8",
+    "lastKnownWriteTime" : 1539496170,
+    "last_content_update" : 1539496170331,
+    "path" : "~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/bibliography.bib",
+    "project_path" : "bibliography.bib",
+    "properties" : {
+        "cursorPosition" : "0,6",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}

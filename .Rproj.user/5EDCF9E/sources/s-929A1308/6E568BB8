@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539495660460.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6E568BB8",
+    "lastKnownWriteTime" : 1539508178,
+    "last_content_update" : 1539508178683,
+    "path" : "~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/ssa_notes.Rmd",
+    "project_path" : "ssa_notes.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "189,3",
+        "scrollLine" : "181",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

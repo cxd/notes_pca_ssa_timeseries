@@ -1,0 +1,971 @@
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa[?1034hlaplace:timeseries_pca_and_ssa cd$ [Klaplace:timeseries_pca_and_ssa cd$ ls
+data				debug.R				lib				timeseries_pca_and_ssa.Rproj
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ cd data
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ ls
+HQDR_stations.txt	HQ_daily_prcp_txt	HQ_daily_prcp_txt.tar	HQdailyR_info.pdf	test
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ series_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ ls
+HQDR_stations.txt	HQ_daily_prcp_txt	HQ_daily_prcp_txt.tar	HQdailyR_info.pdf	test
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ r[Kmv HJ[KQ_daily_prcp_txt HQ_daily_prcp_txt_temp
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ mkdir H[Kdail_prcp_[K
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ rm di[Kail_prcp/
+rm: dail_prcp/: is a directory
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ rmdir dail_prcp/
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ mkdir daily_precip
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ cp HQ_daily_prcp_txt.tar daily_precip/
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ cd daily_precip/
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ ls
+HQ_daily_prcp_txt.tar
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ tar z[K-x HW[KQ_daily_prcp_txt.tar 
+^C
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ ls
+HQ_daily_prcp_txt.tar
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ tar =[K-xvf HQ_daily_prcp_txt.tar 
+x HQDR_stations.txt
+x prcphq.004035.daily.txt.Z
+x prcphq.005008.daily.txt.Z
+x prcphq.006055.daily.txt.Z
+x prcphq.007007.daily.txt.Z
+x prcphq.007057.daily.txt.Z
+x prcphq.007095.daily.txt.Z
+x prcphq.008066.daily.txt.Z
+x prcphq.008079.daily.txt.Z
+x prcphq.008088.daily.txt.Z
+x prcphq.008106.daily.txt.Z
+x prcphq.008141.daily.txt.Z
+x prcphq.009503.daily.txt.Z
+x prcphq.009519.daily.txt.Z
+x prcphq.009520.daily.txt.Z
+x prcphq.009557.daily.txt.Z
+x prcphq.009561.daily.txt.Z
+x prcphq.009564.daily.txt.Z
+x prcphq.009591.daily.txt.Z
+x prcphq.009594.daily.txt.Z
+x prcphq.009619.daily.txt.Z
+x prcphq.010032.daily.txt.Z
+x prcphq.010037.daily.txt.Z
+x prcphq.010039.daily.txt.Z
+x prcphq.010045.daily.txt.Z
+x prcphq.010091.daily.txt.Z
+x prcphq.010092.daily.txt.Z
+x prcphq.010112.daily.txt.Z
+x prcphq.010123.daily.txt.Z
+x prcphq.010126.daily.txt.Z
+x prcphq.010133.daily.txt.Z
+x prcphq.010149.daily.txt.Z
+x prcphq.010505.daily.txt.Z
+x prcphq.010525.daily.txt.Z
+x prcphq.010536.daily.txt.Z
+x prcphq.010537.daily.txt.Z
+x prcphq.010541.daily.txt.Z
+x prcphq.010636.daily.txt.Z
+x prcphq.010670.daily.txt.Z
+x prcphq.012052.daily.txt.Z
+x prcphq.012065.daily.txt.Z
+x prcphq.014042.daily.txt.Z
+x prcphq.014902.daily.txt.Z
+x prcphq.016009.daily.txt.Z
+x prcphq.016022.daily.txt.Z
+x prcphq.016032.daily.txt.Z
+x prcphq.016039.daily.txt.Z
+x prcphq.016055.daily.txt.Z
+x prcphq.017024.daily.txt.Z
+x prcphq.017031.daily.txt.Z
+x prcphq.018001.daily.txt.Z
+x prcphq.018002.daily.txt.Z
+x prcphq.018033.daily.txt.Z
+x prcphq.018045.daily.txt.Z
+x prcphq.018049.daily.txt.Z
+x prcphq.018058.daily.txt.Z
+x prcphq.018065.daily.txt.Z
+x prcphq.018069.daily.txt.Z
+x prcphq.018106.daily.txt.Z
+x prcphq.019001.daily.txt.Z
+x prcphq.019032.daily.txt.Z
+x prcphq.022000.daily.txt.Z
+x prcphq.022009.daily.txt.Z
+x prcphq.022020.daily.txt.Z
+x prcphq.023721.daily.txt.Z
+x prcphq.024501.daily.txt.Z
+x prcphq.024511.daily.txt.Z
+x prcphq.024515.daily.txt.Z
+x prcphq.024521.daily.txt.Z
+x prcphq.024535.daily.txt.Z
+x prcphq.025015.daily.txt.Z
+x prcphq.025507.daily.txt.Z
+x prcphq.026025.daily.txt.Z
+x prcphq.028004.daily.txt.Z
+x prcphq.029004.daily.txt.Z
+x prcphq.031055.daily.txt.Z
+x prcphq.032032.daily.txt.Z
+x prcphq.033035.daily.txt.Z
+x prcphq.036007.daily.txt.Z
+x prcphq.037043.daily.txt.Z
+x prcphq.037051.daily.txt.Z
+x prcphq.038002.daily.txt.Z
+x prcphq.038024.daily.txt.Z
+x prcphq.039037.daily.txt.Z
+x prcphq.040013.daily.txt.Z
+x prcphq.040043.daily.txt.Z
+x prcphq.040082.daily.txt.Z
+x prcphq.040094.daily.txt.Z
+x prcphq.040152.daily.txt.Z
+x prcphq.041011.daily.txt.Z
+x prcphq.041013.daily.txt.Z
+x prcphq.041024.daily.txt.Z
+x prcphq.041082.daily.txt.Z
+x prcphq.042023.daily.txt.Z
+x prcphq.044026.daily.txt.Z
+x prcphq.044054.daily.txt.Z
+x prcphq.045017.daily.txt.Z
+x prcphq.046042.daily.txt.Z
+x prcphq.047029.daily.txt.Z
+x prcphq.047053.daily.txt.Z
+x prcphq.048031.daily.txt.Z
+x prcphq.050031.daily.txt.Z
+x prcphq.054003.daily.txt.Z
+x prcphq.054004.daily.txt.Z
+x prcphq.054036.daily.txt.Z
+x prcphq.055045.daily.txt.Z
+x prcphq.055055.daily.txt.Z
+x prcphq.058012.daily.txt.Z
+x prcphq.058063.daily.txt.Z
+x prcphq.061010.daily.txt.Z
+x prcphq.061014.daily.txt.Z
+x prcphq.062021.daily.txt.Z
+x prcphq.062026.daily.txt.Z
+x prcphq.063005.daily.txt.Z
+x prcphq.068016.daily.txt.Z
+x prcphq.068034.daily.txt.Z
+x prcphq.069006.daily.txt.Z
+x prcphq.069018.daily.txt.Z
+x prcphq.070028.daily.txt.Z
+x prcphq.074128.daily.txt.Z
+x prcphq.075012.daily.txt.Z
+x prcphq.075050.daily.txt.Z
+x prcphq.077008.daily.txt.Z
+x prcphq.077030.daily.txt.Z
+x prcphq.077039.daily.txt.Z
+x prcphq.078043.daily.txt.Z
+x prcphq.078078.daily.txt.Z
+x prcphq.079010.daily.txt.Z
+x prcphq.079036.daily.txt.Z
+x prcphq.080004.daily.txt.Z
+x prcphq.080009.daily.txt.Z
+x prcphq.080065.daily.txt.Z
+x prcphq.082001.daily.txt.Z
+x prcphq.084016.daily.txt.Z
+x prcphq.084030.daily.txt.Z
+x prcphq.085096.daily.txt.Z
+x prcphq.086117.daily.txt.Z
+x prcphq.086131.daily.txt.Z
+x prcphq.087034.daily.txt.Z
+x prcphq.087043.daily.txt.Z
+x prcphq.087053.daily.txt.Z
+x prcphq.088060.daily.txt.Z
+x prcphq.089005.daily.txt.Z
+x prcphq.089033.daily.txt.Z
+x prcphq.091011.daily.txt.Z
+x prcphq.091044.daily.txt.Z
+x prcphq.092012.daily.txt.Z
+x prcphq.092037.daily.txt.Z
+x prcphq.094061.daily.txt.Z
+x prcphq.094063.daily.txt.Z
+x prcphq.095016.daily.txt.Z
+x prcphq.099001.daily.txt.Z
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ ls
+HQDR_stations.txt		prcphq.010670.daily.txt.Z	prcphq.033035.daily.txt.Z	prcphq.069006.daily.txt.Z
+HQ_daily_prcp_txt.tar		prcphq.012052.daily.txt.Z	prcphq.036007.daily.txt.Z	prcphq.069018.daily.txt.Z
+prcphq.004035.daily.txt.Z	prcphq.012065.daily.txt.Z	prcphq.037043.daily.txt.Z	prcphq.070028.daily.txt.Z
+prcphq.005008.daily.txt.Z	prcphq.014042.daily.txt.Z	prcphq.037051.daily.txt.Z	prcphq.074128.daily.txt.Z
+prcphq.006055.daily.txt.Z	prcphq.014902.daily.txt.Z	prcphq.038002.daily.txt.Z	prcphq.075012.daily.txt.Z
+prcphq.007007.daily.txt.Z	prcphq.016009.daily.txt.Z	prcphq.038024.daily.txt.Z	prcphq.075050.daily.txt.Z
+prcphq.007057.daily.txt.Z	prcphq.016022.daily.txt.Z	prcphq.039037.daily.txt.Z	prcphq.077008.daily.txt.Z
+prcphq.007095.daily.txt.Z	prcphq.016032.daily.txt.Z	prcphq.040013.daily.txt.Z	prcphq.077030.daily.txt.Z
+prcphq.008066.daily.txt.Z	prcphq.016039.daily.txt.Z	prcphq.040043.daily.txt.Z	prcphq.077039.daily.txt.Z
+prcphq.008079.daily.txt.Z	prcphq.016055.daily.txt.Z	prcphq.040082.daily.txt.Z	prcphq.078043.daily.txt.Z
+prcphq.008088.daily.txt.Z	prcphq.017024.daily.txt.Z	prcphq.040094.daily.txt.Z	prcphq.078078.daily.txt.Z
+prcphq.008106.daily.txt.Z	prcphq.017031.daily.txt.Z	prcphq.040152.daily.txt.Z	prcphq.079010.daily.txt.Z
+prcphq.008141.daily.txt.Z	prcphq.018001.daily.txt.Z	prcphq.041011.daily.txt.Z	prcphq.079036.daily.txt.Z
+prcphq.009503.daily.txt.Z	prcphq.018002.daily.txt.Z	prcphq.041013.daily.txt.Z	prcphq.080004.daily.txt.Z
+prcphq.009519.daily.txt.Z	prcphq.018033.daily.txt.Z	prcphq.041024.daily.txt.Z	prcphq.080009.daily.txt.Z
+prcphq.009520.daily.txt.Z	prcphq.018045.daily.txt.Z	prcphq.041082.daily.txt.Z	prcphq.080065.daily.txt.Z
+prcphq.009557.daily.txt.Z	prcphq.018049.daily.txt.Z	prcphq.042023.daily.txt.Z	prcphq.082001.daily.txt.Z
+prcphq.009561.daily.txt.Z	prcphq.018058.daily.txt.Z	prcphq.044026.daily.txt.Z	prcphq.084016.daily.txt.Z
+prcphq.009564.daily.txt.Z	prcphq.018065.daily.txt.Z	prcphq.044054.daily.txt.Z	prcphq.084030.daily.txt.Z
+prcphq.009591.daily.txt.Z	prcphq.018069.daily.txt.Z	prcphq.045017.daily.txt.Z	prcphq.085096.daily.txt.Z
+prcphq.009594.daily.txt.Z	prcphq.018106.daily.txt.Z	prcphq.046042.daily.txt.Z	prcphq.086117.daily.txt.Z
+prcphq.009619.daily.txt.Z	prcphq.019001.daily.txt.Z	prcphq.047029.daily.txt.Z	prcphq.086131.daily.txt.Z
+prcphq.010032.daily.txt.Z	prcphq.019032.daily.txt.Z	prcphq.047053.daily.txt.Z	prcphq.087034.daily.txt.Z
+prcphq.010037.daily.txt.Z	prcphq.022000.daily.txt.Z	prcphq.048031.daily.txt.Z	prcphq.087043.daily.txt.Z
+prcphq.010039.daily.txt.Z	prcphq.022009.daily.txt.Z	prcphq.050031.daily.txt.Z	prcphq.087053.daily.txt.Z
+prcphq.010045.daily.txt.Z	prcphq.022020.daily.txt.Z	prcphq.054003.daily.txt.Z	prcphq.088060.daily.txt.Z
+prcphq.010091.daily.txt.Z	prcphq.023721.daily.txt.Z	prcphq.054004.daily.txt.Z	prcphq.089005.daily.txt.Z
+prcphq.010092.daily.txt.Z	prcphq.024501.daily.txt.Z	prcphq.054036.daily.txt.Z	prcphq.089033.daily.txt.Z
+prcphq.010112.daily.txt.Z	prcphq.024511.daily.txt.Z	prcphq.055045.daily.txt.Z	prcphq.091011.daily.txt.Z
+prcphq.010123.daily.txt.Z	prcphq.024515.daily.txt.Z	prcphq.055055.daily.txt.Z	prcphq.091044.daily.txt.Z
+prcphq.010126.daily.txt.Z	prcphq.024521.daily.txt.Z	prcphq.058012.daily.txt.Z	prcphq.092012.daily.txt.Z
+prcphq.010133.daily.txt.Z	prcphq.024535.daily.txt.Z	prcphq.058063.daily.txt.Z	prcphq.092037.daily.txt.Z
+prcphq.010149.daily.txt.Z	prcphq.025015.daily.txt.Z	prcphq.061010.daily.txt.Z	prcphq.094061.daily.txt.Z
+prcphq.010505.daily.txt.Z	prcphq.025507.daily.txt.Z	prcphq.061014.daily.txt.Z	prcphq.094063.daily.txt.Z
+prcphq.010525.daily.txt.Z	prcphq.026025.daily.txt.Z	prcphq.062021.daily.txt.Z	prcphq.095016.daily.txt.Z
+prcphq.010536.daily.txt.Z	prcphq.028004.daily.txt.Z	prcphq.062026.daily.txt.Z	prcphq.099001.daily.txt.Z
+prcphq.010537.daily.txt.Z	prcphq.029004.daily.txt.Z	prcphq.063005.daily.txt.Z
+prcphq.010541.daily.txt.Z	prcphq.031055.daily.txt.Z	prcphq.068016.daily.txt.Z
+prcphq.010636.daily.txt.Z	prcphq.032032.daily.txt.Z	prcphq.068034.daily.txt.Z
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ ls *.tar
+HQ_daily_prcp_txt.tar
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ rm (.[K[K*.tar
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ ls *.txt
+HQDR_stations.txt
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ rm *.txt
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/daily_preciplaplace:daily_precip cd$ cd ..
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ ls
+HQDR_stations.txt	HQ_daily_prcp_txt_temp	daily_precip
+HQ_daily_prcp_txt.tar	HQdailyR_info.pdf	test
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ ls daily_precip/
+prcphq.004035.daily.txt.Z	prcphq.012052.daily.txt.Z	prcphq.033035.daily.txt.Z	prcphq.068034.daily.txt.Z
+prcphq.005008.daily.txt.Z	prcphq.012065.daily.txt.Z	prcphq.036007.daily.txt.Z	prcphq.069006.daily.txt.Z
+prcphq.006055.daily.txt.Z	prcphq.014042.daily.txt.Z	prcphq.037043.daily.txt.Z	prcphq.069018.daily.txt.Z
+prcphq.007007.daily.txt.Z	prcphq.014902.daily.txt.Z	prcphq.037051.daily.txt.Z	prcphq.070028.daily.txt.Z
+prcphq.007057.daily.txt.Z	prcphq.016009.daily.txt.Z	prcphq.038002.daily.txt.Z	prcphq.074128.daily.txt.Z
+prcphq.007095.daily.txt.Z	prcphq.016022.daily.txt.Z	prcphq.038024.daily.txt.Z	prcphq.075012.daily.txt.Z
+prcphq.008066.daily.txt.Z	prcphq.016032.daily.txt.Z	prcphq.039037.daily.txt.Z	prcphq.075050.daily.txt.Z
+prcphq.008079.daily.txt.Z	prcphq.016039.daily.txt.Z	prcphq.040013.daily.txt.Z	prcphq.077008.daily.txt.Z
+prcphq.008088.daily.txt.Z	prcphq.016055.daily.txt.Z	prcphq.040043.daily.txt.Z	prcphq.077030.daily.txt.Z
+prcphq.008106.daily.txt.Z	prcphq.017024.daily.txt.Z	prcphq.040082.daily.txt.Z	prcphq.077039.daily.txt.Z
+prcphq.008141.daily.txt.Z	prcphq.017031.daily.txt.Z	prcphq.040094.daily.txt.Z	prcphq.078043.daily.txt.Z
+prcphq.009503.daily.txt.Z	prcphq.018001.daily.txt.Z	prcphq.040152.daily.txt.Z	prcphq.078078.daily.txt.Z
+prcphq.009519.daily.txt.Z	prcphq.018002.daily.txt.Z	prcphq.041011.daily.txt.Z	prcphq.079010.daily.txt.Z
+prcphq.009520.daily.txt.Z	prcphq.018033.daily.txt.Z	prcphq.041013.daily.txt.Z	prcphq.079036.daily.txt.Z
+prcphq.009557.daily.txt.Z	prcphq.018045.daily.txt.Z	prcphq.041024.daily.txt.Z	prcphq.080004.daily.txt.Z
+prcphq.009561.daily.txt.Z	prcphq.018049.daily.txt.Z	prcphq.041082.daily.txt.Z	prcphq.080009.daily.txt.Z
+prcphq.009564.daily.txt.Z	prcphq.018058.daily.txt.Z	prcphq.042023.daily.txt.Z	prcphq.080065.daily.txt.Z
+prcphq.009591.daily.txt.Z	prcphq.018065.daily.txt.Z	prcphq.044026.daily.txt.Z	prcphq.082001.daily.txt.Z
+prcphq.009594.daily.txt.Z	prcphq.018069.daily.txt.Z	prcphq.044054.daily.txt.Z	prcphq.084016.daily.txt.Z
+prcphq.009619.daily.txt.Z	prcphq.018106.daily.txt.Z	prcphq.045017.daily.txt.Z	prcphq.084030.daily.txt.Z
+prcphq.010032.daily.txt.Z	prcphq.019001.daily.txt.Z	prcphq.046042.daily.txt.Z	prcphq.085096.daily.txt.Z
+prcphq.010037.daily.txt.Z	prcphq.019032.daily.txt.Z	prcphq.047029.daily.txt.Z	prcphq.086117.daily.txt.Z
+prcphq.010039.daily.txt.Z	prcphq.022000.daily.txt.Z	prcphq.047053.daily.txt.Z	prcphq.086131.daily.txt.Z
+prcphq.010045.daily.txt.Z	prcphq.022009.daily.txt.Z	prcphq.048031.daily.txt.Z	prcphq.087034.daily.txt.Z
+prcphq.010091.daily.txt.Z	prcphq.022020.daily.txt.Z	prcphq.050031.daily.txt.Z	prcphq.087043.daily.txt.Z
+prcphq.010092.daily.txt.Z	prcphq.023721.daily.txt.Z	prcphq.054003.daily.txt.Z	prcphq.087053.daily.txt.Z
+prcphq.010112.daily.txt.Z	prcphq.024501.daily.txt.Z	prcphq.054004.daily.txt.Z	prcphq.088060.daily.txt.Z
+prcphq.010123.daily.txt.Z	prcphq.024511.daily.txt.Z	prcphq.054036.daily.txt.Z	prcphq.089005.daily.txt.Z
+prcphq.010126.daily.txt.Z	prcphq.024515.daily.txt.Z	prcphq.055045.daily.txt.Z	prcphq.089033.daily.txt.Z
+prcphq.010133.daily.txt.Z	prcphq.024521.daily.txt.Z	prcphq.055055.daily.txt.Z	prcphq.091011.daily.txt.Z
+prcphq.010149.daily.txt.Z	prcphq.024535.daily.txt.Z	prcphq.058012.daily.txt.Z	prcphq.091044.daily.txt.Z
+prcphq.010505.daily.txt.Z	prcphq.025015.daily.txt.Z	prcphq.058063.daily.txt.Z	prcphq.092012.daily.txt.Z
+prcphq.010525.daily.txt.Z	prcphq.025507.daily.txt.Z	prcphq.061010.daily.txt.Z	prcphq.092037.daily.txt.Z
+prcphq.010536.daily.txt.Z	prcphq.026025.daily.txt.Z	prcphq.061014.daily.txt.Z	prcphq.094061.daily.txt.Z
+prcphq.010537.daily.txt.Z	prcphq.028004.daily.txt.Z	prcphq.062021.daily.txt.Z	prcphq.094063.daily.txt.Z
+prcphq.010541.daily.txt.Z	prcphq.029004.daily.txt.Z	prcphq.062026.daily.txt.Z	prcphq.095016.daily.txt.Z
+prcphq.010636.daily.txt.Z	prcphq.031055.daily.txt.Z	prcphq.063005.daily.txt.Z	prcphq.099001.daily.txt.Z
+prcphq.010670.daily.txt.Z	prcphq.032032.daily.txt.Z	prcphq.068016.daily.txt.Z
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ z[Kls
+HQDR_stations.txt	HQ_daily_prcp_txt_temp	daily_precip
+HQ_daily_prcp_txt.tar	HQdailyR_info.pdf	test
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ cd ,,
+bash: cd: ,,: No such file or directory
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ cd ..
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ lls
+bash: lls: command not found
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls
+data				debug.R				lib				timeseries_pca_and_ssa.Rproj
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ zcat data/daily_precip/prcphq.016022.daily.txt.Z | more
+[?1h=PRCP       016022 19050701 20171231 missing_value=99999.9 KONDOOLKA                                 
+19050701     0.8
+19050702 99999.9
+19050703     1.5
+19050704     0.0
+19050705     0.0
+19050706     0.0
+19050707     0.0
+19050708     0.0
+19050709 99999.9
+19050710     2.5
+19050711     5.3
+19050712     0.0
+19050713     0.0
+19050714     0.0
+19050715     0.0
+19050716 99999.9
+19050717     0.8
+:[K[K19050718     0.0
+:[K[K19050719     0.0
+:[K[K19050720     0.0
+:[K[K19050721     0.0
+:[K[K19050722     0.0
+:[K[K19050723     2.0
+:[K[K19050724     0.0
+:[K[K19050725     3.0
+:[K[K19050726     0.0
+:[K[K19050727     0.0
+:[K[K19050728     0.0
+:[K[K19050729     0.0
+:[K[K19050730     0.0
+:[K[K19050731     0.0
+:[K[K19050801     0.0
+:[K[K19050802     0.0
+:[K[K19050803     0.0
+:[K[K19050804     0.0
+:[K[K19050805     0.0
+:[K[K19050806     0.0
+:[K[K19050807     0.0
+:[K[K19050808     0.0
+:[K[K19050809     0.0
+:[K[K19050810     4.8
+:[K[K19050811     0.0
+:[K[K19050812     0.0
+:[K[K19050813     1.3
+:[K[K19050814     0.0
+:[K[K19050815     0.0
+:[K[K19050816     0.0
+:[K[K19050817     0.0
+:[K[K19050818     0.0
+:[K[K19050819     0.0
+:[K[K19050820 99999.9
+:[K[K19050821     3.6
+:[K[K19050822     0.0
+:[K[K19050823     0.0
+:[K[K19050824     0.0
+:[K[K19050825     0.0
+:[K[K19050826     4.8
+:[K[K19050827     0.0
+:[K[K19050828     0.0
+:[K[K19050829     5.8
+:[K[K19050830     1.3
+:[K[K19050831     0.0
+:[K[K19050901 99999.9
+:[K[K19050902     0.5
+:[K[K19050903 99999.9
+:[K[K[?1l>]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ zcat data/daily_precip/prcphq.016022.daily.txt.Z | more
+[?1h=PRCP       016022 19050701 20171231 missing_value=99999.9 KONDOOLKA                                 
+19050701     0.8
+19050702 99999.9
+19050703     1.5
+19050704     0.0
+19050705     0.0
+19050706     0.0
+19050707     0.0
+19050708     0.0
+19050709 99999.9
+19050710     2.5
+19050711     5.3
+19050712     0.0
+19050713     0.0
+19050714     0.0
+19050715     0.0
+19050716 99999.9
+19050717     0.8
+:[K[K[?1l>]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ rm data/daily_precip/prcphq.016022.daily.txt.Z
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls daily/daily_precip
+ls: daily/daily_precip: No such file or directory
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls daily/daily_precip[Cdaily/daily_precipadaily/daily_preciptdaily/daily_precipadaily/daily_precip/daily/daily_precip
+ls: data/daily/daily_precip: No such file or directory
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls data/daily/daily_precip[K[K[K[K[K[K[K[K[K[K[K[K[K
+ls: data/daily: No such file or directory
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls data/daily_precip/[=[K[K
+prcphq.004035.daily.txt.Z	prcphq.012052.daily.txt.Z	prcphq.036007.daily.txt.Z	prcphq.069006.daily.txt.Z
+prcphq.005008.daily.txt.Z	prcphq.012065.daily.txt.Z	prcphq.037043.daily.txt.Z	prcphq.069018.daily.txt.Z
+prcphq.006055.daily.txt.Z	prcphq.014042.daily.txt.Z	prcphq.037051.daily.txt.Z	prcphq.070028.daily.txt.Z
+prcphq.007007.daily.txt.Z	prcphq.014902.daily.txt.Z	prcphq.038002.daily.txt.Z	prcphq.074128.daily.txt.Z
+prcphq.007057.daily.txt.Z	prcphq.016009.daily.txt.Z	prcphq.038024.daily.txt.Z	prcphq.075012.daily.txt.Z
+prcphq.007095.daily.txt.Z	prcphq.016032.daily.txt.Z	prcphq.039037.daily.txt.Z	prcphq.075050.daily.txt.Z
+prcphq.008066.daily.txt.Z	prcphq.016039.daily.txt.Z	prcphq.040013.daily.txt.Z	prcphq.077008.daily.txt.Z
+prcphq.008079.daily.txt.Z	prcphq.016055.daily.txt.Z	prcphq.040043.daily.txt.Z	prcphq.077030.daily.txt.Z
+prcphq.008088.daily.txt.Z	prcphq.017024.daily.txt.Z	prcphq.040082.daily.txt.Z	prcphq.077039.daily.txt.Z
+prcphq.008106.daily.txt.Z	prcphq.017031.daily.txt.Z	prcphq.040094.daily.txt.Z	prcphq.078043.daily.txt.Z
+prcphq.008141.daily.txt.Z	prcphq.018001.daily.txt.Z	prcphq.040152.daily.txt.Z	prcphq.078078.daily.txt.Z
+prcphq.009503.daily.txt.Z	prcphq.018002.daily.txt.Z	prcphq.041011.daily.txt.Z	prcphq.079010.daily.txt.Z
+prcphq.009519.daily.txt.Z	prcphq.018033.daily.txt.Z	prcphq.041013.daily.txt.Z	prcphq.079036.daily.txt.Z
+prcphq.009520.daily.txt.Z	prcphq.018045.daily.txt.Z	prcphq.041024.daily.txt.Z	prcphq.080004.daily.txt.Z
+prcphq.009557.daily.txt.Z	prcphq.018049.daily.txt.Z	prcphq.041082.daily.txt.Z	prcphq.080009.daily.txt.Z
+prcphq.009561.daily.txt.Z	prcphq.018058.daily.txt.Z	prcphq.042023.daily.txt.Z	prcphq.080065.daily.txt.Z
+prcphq.009564.daily.txt.Z	prcphq.018065.daily.txt.Z	prcphq.044026.daily.txt.Z	prcphq.082001.daily.txt.Z
+prcphq.009591.daily.txt.Z	prcphq.018069.daily.txt.Z	prcphq.044054.daily.txt.Z	prcphq.084016.daily.txt.Z
+prcphq.009594.daily.txt.Z	prcphq.018106.daily.txt.Z	prcphq.045017.daily.txt.Z	prcphq.084030.daily.txt.Z
+prcphq.009619.daily.txt.Z	prcphq.019001.daily.txt.Z	prcphq.046042.daily.txt.Z	prcphq.085096.daily.txt.Z
+prcphq.010032.daily.txt.Z	prcphq.019032.daily.txt.Z	prcphq.047029.daily.txt.Z	prcphq.086117.daily.txt.Z
+prcphq.010037.daily.txt.Z	prcphq.022000.daily.txt.Z	prcphq.047053.daily.txt.Z	prcphq.086131.daily.txt.Z
+prcphq.010039.daily.txt.Z	prcphq.022009.daily.txt.Z	prcphq.048031.daily.txt.Z	prcphq.087034.daily.txt.Z
+prcphq.010045.daily.txt.Z	prcphq.022020.daily.txt.Z	prcphq.050031.daily.txt.Z	prcphq.087043.daily.txt.Z
+prcphq.010091.daily.txt.Z	prcphq.023721.daily.txt.Z	prcphq.054003.daily.txt.Z	prcphq.087053.daily.txt.Z
+prcphq.010092.daily.txt.Z	prcphq.024501.daily.txt.Z	prcphq.054004.daily.txt.Z	prcphq.088060.daily.txt.Z
+prcphq.010112.daily.txt.Z	prcphq.024511.daily.txt.Z	prcphq.054036.daily.txt.Z	prcphq.089005.daily.txt.Z
+prcphq.010123.daily.txt.Z	prcphq.024515.daily.txt.Z	prcphq.055045.daily.txt.Z	prcphq.089033.daily.txt.Z
+prcphq.010126.daily.txt.Z	prcphq.024521.daily.txt.Z	prcphq.055055.daily.txt.Z	prcphq.091011.daily.txt.Z
+prcphq.010133.daily.txt.Z	prcphq.024535.daily.txt.Z	prcphq.058012.daily.txt.Z	prcphq.091044.daily.txt.Z
+prcphq.010149.daily.txt.Z	prcphq.025015.daily.txt.Z	prcphq.058063.daily.txt.Z	prcphq.092012.daily.txt.Z
+prcphq.010505.daily.txt.Z	prcphq.025507.daily.txt.Z	prcphq.061010.daily.txt.Z	prcphq.092037.daily.txt.Z
+prcphq.010525.daily.txt.Z	prcphq.026025.daily.txt.Z	prcphq.061014.daily.txt.Z	prcphq.094061.daily.txt.Z
+prcphq.010536.daily.txt.Z	prcphq.028004.daily.txt.Z	prcphq.062021.daily.txt.Z	prcphq.094063.daily.txt.Z
+prcphq.010537.daily.txt.Z	prcphq.029004.daily.txt.Z	prcphq.062026.daily.txt.Z	prcphq.095016.daily.txt.Z
+prcphq.010541.daily.txt.Z	prcphq.031055.daily.txt.Z	prcphq.063005.daily.txt.Z	prcphq.099001.daily.txt.Z
+prcphq.010636.daily.txt.Z	prcphq.032032.daily.txt.Z	prcphq.068016.daily.txt.Z
+prcphq.010670.daily.txt.Z	prcphq.033035.daily.txt.Z	prcphq.068034.daily.txt.Z
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls
+data				debug.R				lib				timeseries_pca_and_ssa.Rproj
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ cd data
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ ls
+HQDR_stations.txt	HQ_daily_prcp_txt_temp	daily_precip
+HQ_daily_prcp_txt.tar	HQdailyR_info.pdf	test
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ vi HQ_[K[KQDR_stations.txt 
+[?2004h]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ ls da[K[Kdaily_precip/
+prcphq.004035.daily.txt.Z	prcphq.012052.daily.txt.Z	prcphq.036007.daily.txt.Z	prcphq.069006.daily.txt.Z
+prcphq.005008.daily.txt.Z	prcphq.012065.daily.txt.Z	prcphq.037043.daily.txt.Z	prcphq.069018.daily.txt.Z
+prcphq.006055.daily.txt.Z	prcphq.014042.daily.txt.Z	prcphq.037051.daily.txt.Z	prcphq.070028.daily.txt.Z
+prcphq.007007.daily.txt.Z	prcphq.014902.daily.txt.Z	prcphq.038002.daily.txt.Z	prcphq.074128.daily.txt.Z
+prcphq.007057.daily.txt.Z	prcphq.016009.daily.txt.Z	prcphq.038024.daily.txt.Z	prcphq.075012.daily.txt.Z
+prcphq.007095.daily.txt.Z	prcphq.016032.daily.txt.Z	prcphq.039037.daily.txt.Z	prcphq.075050.daily.txt.Z
+prcphq.008066.daily.txt.Z	prcphq.016039.daily.txt.Z	prcphq.040013.daily.txt.Z	prcphq.077008.daily.txt.Z
+prcphq.008079.daily.txt.Z	prcphq.016055.daily.txt.Z	prcphq.040043.daily.txt.Z	prcphq.077030.daily.txt.Z
+prcphq.008088.daily.txt.Z	prcphq.017024.daily.txt.Z	prcphq.040082.daily.txt.Z	prcphq.077039.daily.txt.Z
+prcphq.008106.daily.txt.Z	prcphq.017031.daily.txt.Z	prcphq.040094.daily.txt.Z	prcphq.078043.daily.txt.Z
+prcphq.008141.daily.txt.Z	prcphq.018001.daily.txt.Z	prcphq.040152.daily.txt.Z	prcphq.078078.daily.txt.Z
+prcphq.009503.daily.txt.Z	prcphq.018002.daily.txt.Z	prcphq.041011.daily.txt.Z	prcphq.079010.daily.txt.Z
+prcphq.009519.daily.txt.Z	prcphq.018033.daily.txt.Z	prcphq.041013.daily.txt.Z	prcphq.079036.daily.txt.Z
+prcphq.009520.daily.txt.Z	prcphq.018045.daily.txt.Z	prcphq.041024.daily.txt.Z	prcphq.080004.daily.txt.Z
+prcphq.009557.daily.txt.Z	prcphq.018049.daily.txt.Z	prcphq.041082.daily.txt.Z	prcphq.080009.daily.txt.Z
+prcphq.009561.daily.txt.Z	prcphq.018058.daily.txt.Z	prcphq.042023.daily.txt.Z	prcphq.080065.daily.txt.Z
+prcphq.009564.daily.txt.Z	prcphq.018065.daily.txt.Z	prcphq.044026.daily.txt.Z	prcphq.082001.daily.txt.Z
+prcphq.009591.daily.txt.Z	prcphq.018069.daily.txt.Z	prcphq.044054.daily.txt.Z	prcphq.084016.daily.txt.Z
+prcphq.009594.daily.txt.Z	prcphq.018106.daily.txt.Z	prcphq.045017.daily.txt.Z	prcphq.084030.daily.txt.Z
+prcphq.009619.daily.txt.Z	prcphq.019001.daily.txt.Z	prcphq.046042.daily.txt.Z	prcphq.085096.daily.txt.Z
+prcphq.010032.daily.txt.Z	prcphq.019032.daily.txt.Z	prcphq.047029.daily.txt.Z	prcphq.086117.daily.txt.Z
+prcphq.010037.daily.txt.Z	prcphq.022000.daily.txt.Z	prcphq.047053.daily.txt.Z	prcphq.086131.daily.txt.Z
+prcphq.010039.daily.txt.Z	prcphq.022009.daily.txt.Z	prcphq.048031.daily.txt.Z	prcphq.087034.daily.txt.Z
+prcphq.010045.daily.txt.Z	prcphq.022020.daily.txt.Z	prcphq.050031.daily.txt.Z	prcphq.087043.daily.txt.Z
+prcphq.010091.daily.txt.Z	prcphq.023721.daily.txt.Z	prcphq.054003.daily.txt.Z	prcphq.087053.daily.txt.Z
+prcphq.010092.daily.txt.Z	prcphq.024501.daily.txt.Z	prcphq.054004.daily.txt.Z	prcphq.088060.daily.txt.Z
+prcphq.010112.daily.txt.Z	prcphq.024511.daily.txt.Z	prcphq.054036.daily.txt.Z	prcphq.089005.daily.txt.Z
+prcphq.010123.daily.txt.Z	prcphq.024515.daily.txt.Z	prcphq.055045.daily.txt.Z	prcphq.089033.daily.txt.Z
+prcphq.010126.daily.txt.Z	prcphq.024521.daily.txt.Z	prcphq.055055.daily.txt.Z	prcphq.091011.daily.txt.Z
+prcphq.010133.daily.txt.Z	prcphq.024535.daily.txt.Z	prcphq.058012.daily.txt.Z	prcphq.091044.daily.txt.Z
+prcphq.010149.daily.txt.Z	prcphq.025015.daily.txt.Z	prcphq.058063.daily.txt.Z	prcphq.092012.daily.txt.Z
+prcphq.010505.daily.txt.Z	prcphq.025507.daily.txt.Z	prcphq.061010.daily.txt.Z	prcphq.092037.daily.txt.Z
+prcphq.010525.daily.txt.Z	prcphq.026025.daily.txt.Z	prcphq.061014.daily.txt.Z	prcphq.094061.daily.txt.Z
+prcphq.010536.daily.txt.Z	prcphq.028004.daily.txt.Z	prcphq.062021.daily.txt.Z	prcphq.094063.daily.txt.Z
+prcphq.010537.daily.txt.Z	prcphq.029004.daily.txt.Z	prcphq.062026.daily.txt.Z	prcphq.095016.daily.txt.Z
+prcphq.010541.daily.txt.Z	prcphq.031055.daily.txt.Z	prcphq.063005.daily.txt.Z	prcphq.099001.daily.txt.Z
+prcphq.010636.daily.txt.Z	prcphq.032032.daily.txt.Z	prcphq.068016.daily.txt.Z
+prcphq.010670.daily.txt.Z	prcphq.033035.daily.txt.Z	prcphq.068034.daily.txt.Z
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ ls daily_precip/prcphq.0
+Display all 150 possibilities? (y or n)
+laplace:data cd$ ls daily_precip/prcphq.0
+ls: daily_precip/prcphq.0: No such file or directory
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ ls daily_precip/prcphq.0[K004035.daily.txt.Z 
+daily_precip/prcphq.004035.daily.txt.Z
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ ls daily_precip/prcphq.004035.daily.txt.Z [1P[1P[1@z[1@c[1@a[1@t[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C| more
+[?1h=PRCP       004035 18870301 20150110 missing_value=99999.9 ROEBOURNE                                 
+18870301     0.0
+18870302     0.0
+18870303     0.0
+18870304     0.0
+18870305     0.0
+18870306     0.0
+18870307     0.0
+18870308     0.0
+18870309     0.0
+18870310     0.0
+18870311     0.0
+18870312     0.0
+18870313     0.0
+18870314     0.0
+18870315     0.0
+18870316     0.0
+18870317     0.0
+:[K[K18870318     0.0
+:[K[K18870319     0.0
+:[K[K18870320     0.0
+:[K[K18870321     0.0
+:[K[K18870322     0.0
+:[K[K18870323     0.0
+:[K[K18870324     0.0
+:[K[K18870325     0.0
+:[K[K18870326     0.0
+:[K[K18870327     0.0
+:[K[K18870328     0.0
+:[K[K18870329     0.0
+:[K[K18870330     0.0
+:[K[K18870331     0.0
+:[K[K18870401 99999.9
+:[K[K18870402 99999.9
+:[K[K18870403 99999.9
+:[K[K18870404 99999.9
+:[K[K18870405 99999.9
+:[K[K18870406 99999.9
+:[K[K18870407 99999.9
+:[K[K18870408 99999.9
+:[K[K18870409 99999.9
+:[K[K18870410 99999.9
+:[K[K18870411 99999.9
+:[K[K18870412 99999.9
+:[K[K18870413 99999.9
+:[K[K18870414 99999.9
+:[K[K18870415 99999.9
+:[K[K18870416 99999.9
+:[K[K18870417 99999.9
+:[K[K18870418 99999.9
+:[K[K18870419 99999.9
+:[K[K18870420 99999.9
+:[K[K18870421 99999.9
+:[K[K18870422 99999.9
+:[K[K18870423 99999.9
+:[K[K18870424 99999.9
+:[K[K18870425 99999.9
+:[K[K18870426 99999.9
+:[K[K18870427 99999.9
+:[K[K18870428 99999.9
+:[K[K18870429 99999.9
+:[K[K18870430 99999.9
+:[K[K18870501 99999.9
+:[K[K18870502 99999.9
+:[K[K18870503 99999.9
+:[K[K18870504 99999.9
+:[K[K18870505 99999.9
+:[K[K18870506 99999.9
+:[K[K18870507 99999.9
+:[K[K18870508 99999.9
+:[K[K18870509 99999.9
+:[K[K18870510 99999.9
+:[K[K18870511 99999.9
+:[K[K18870512 99999.9
+:[K[K18870513 99999.9
+:[K[K18870514 99999.9
+:[K[K18870515 99999.9
+:[K[K18870516 99999.9
+:[K[K18870517 99999.9
+:[K[K18870518 99999.9
+:[K[K18870519 99999.9
+:[K[K18870520 99999.9
+:[K[K18870521 99999.9
+:[K[K18870522 99999.9
+:[K[K18870523 99999.9
+:[K[K18870524 99999.9
+:[K[K18870525 99999.9
+:[K[K18870526 99999.9
+:[K[K18870527 99999.9
+:[K[K18870528 99999.9
+:[K[K18870529 99999.9
+:[K[K18870530 99999.9
+:[K[K18870531 99999.9
+:[K[K18870601 99999.9
+:[K[K18870602 99999.9
+:[K[K18870603 99999.9
+:[K[K18870604 99999.9
+:[K[K18870605 99999.9
+:[K[K18870606 99999.9
+:[K[K18870607 99999.9
+:[K[K18870608 99999.9
+:[K[K18870609 99999.9
+:[K[K18870610 99999.9
+:[K[K18870611 99999.9
+:[K[K18870612 99999.9
+:[K[K18870613 99999.9
+:[K[K18870614 99999.9
+:[K[K18870615 99999.9
+:[K[K18870616 99999.9
+:[K[K18870617 99999.9
+:[K[K18870618 99999.9
+:[K[K18870619 99999.9
+:[K[K18870620 99999.9
+:[K[K18870621 99999.9
+:[K[K18870622 99999.9
+:[K[K18870623 99999.9
+:[K[K18870624 99999.9
+:[K[K18870625 99999.9
+:[K[K18870626 99999.9
+:[K[K18870627 99999.9
+:[K[K18870628 99999.9
+:[K[K18870629 99999.9
+:[K[K18870630 99999.9
+:[K[K18870701 99999.9
+:[K[K18870702 99999.9
+:[K[K18870703 99999.9
+:[K[K18870704 99999.9
+:[K[K18870705 99999.9
+:[K[K18870706 99999.9
+:[K[K18870707 99999.9
+:[K[K18870708 99999.9
+:[K[K18870709 99999.9
+:[K[K18870710 99999.9
+:[K[K18870711 99999.9
+:[K[K18870712 99999.9
+:[K[K18870713 99999.9
+:[K[K18870714 99999.9
+:[K[K18870715 99999.9
+:[K[K18870716 99999.9
+:[K[K18870717 99999.9
+:[K[K18870718 99999.9
+:[K[K18870719 99999.9
+:[K[K18870720 99999.9
+:[K[K18870721 99999.9
+:[K[K18870722 99999.9
+:[K[K18870723 99999.9
+:[K[K18870724 99999.9
+:[K[K18870725 99999.9
+:[K[K18870726 99999.9
+:[K[K18870727 99999.9
+:[K[K18870728 99999.9
+:[K[K18870729 99999.9
+:[K[K18870730 99999.9
+:[K[K18870731 99999.9
+:[K[K18870801 99999.9
+:[K[K18870802 99999.9
+:[K[K18870803 99999.9
+:[K[K18870804 99999.9
+:[K[K18870805 99999.9
+:[K[K18870806 99999.9
+:[K[K[?1l>]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ zcat daily_precip/prcphq.004035.daily.txt.Z | more[1P[1P[1P[1P[1P[1P[1@0[1@4[1@0[1@0[1@4[1@3
+[?1h=PRCP       040043 18870401 20180209 missing_value=99999.9 CAPE MORETON LIGHTHOUSE                   
+18870401     0.0
+18870402    19.1
+18870403     0.0
+18870404     7.6
+18870405     5.8
+18870406     0.5
+18870407     2.0
+18870408     8.6
+18870409    10.9
+18870410     2.5
+18870411     2.0
+18870412     2.5
+18870413     0.0
+18870414     1.3
+18870415    47.5
+18870416     0.3
+18870417     5.1
+:[K[K18870418    85.9
+:[K[K18870419     0.0
+:[K[K18870420     4.8
+:[K[K18870421     4.6
+:[K[K18870422    17.8
+:[K[K18870423    10.7
+:[K[K18870424     2.8
+:[K[K18870425     1.3
+:[K[K18870426    50.8
+:[K[K18870427    19.1
+:[K[K18870428     0.0
+:[K[K18870429     0.0
+:[K[K18870430     0.0
+:[K[K18870501     1.0
+:[K[K18870502     4.3
+:[K[K18870503     0.0
+:[K[K18870504     3.0
+:[K[K18870505     0.0
+:[K[K18870506     0.0
+:[K[K18870507     0.0
+:[K[K18870508     0.0
+:[K[K18870509     0.0
+:[K[K18870510     0.0
+:[K[K18870511     0.0
+:[K[K18870512     0.0
+:[K[K18870513     0.0
+:[K[K18870514     0.0
+:[K[K18870515     0.0
+:[K[K18870516     0.0
+:[K[K18870517     0.0
+:[K[K18870518     0.0
+:[K[K18870519     0.0
+:[K[K18870520     0.0
+:[K[K18870521     0.5
+:[K[K18870522     6.9
+:[K[K18870523     0.0
+:[K[K18870524     0.0
+:[K[K18870525     0.0
+:[K[K18870526     8.4
+:[K[K18870527    41.4
+:[K[K18870528    33.8
+:[K[K18870529    66.5
+:[K[K18870530     0.0
+:[K[K18870531    77.5
+:[K[K18870601    69.9
+:[K[K18870602     0.0
+:[K[K18870603     0.0
+:[K[K18870604     0.0
+:[K[K18870605     0.0
+:[K[K18870606     0.0
+:[K[K18870607     0.0
+:[K[K18870608     0.0
+:[K[K18870609     0.0
+:[K[K18870610     0.0
+:[K[K18870611     0.0
+:[K[K18870612     0.0
+:[K[K18870613     2.0
+:[K[K18870614     0.0
+:[K[K18870615     0.0
+:[K[K18870616     0.5
+:[K[K18870617    21.6
+:[K[K18870618     0.0
+:[K[K18870619     0.0
+:[K[K18870620     0.0
+:[K[K18870621     0.0
+:[K[K18870622     0.0
+:[K[K18870623     0.0
+:[K[K18870624     0.0
+:[K[K18870625     0.0
+:[K[K18870626     0.0
+:[K[K18870627     0.0
+:[K[K18870628     0.0
+:[K[K18870629     5.1
+:[K[K18870630     0.8
+:[K[K18870701     2.5
+:[K[K18870702    15.2
+:[K[K18870703     0.8
+:[K[K18870704     2.5
+:[K[K18870705    18.3
+:[K[K18870706     1.0
+:[K[K18870707     0.0
+:[K[K18870708     0.0
+:[K[K18870709     0.0
+:[K[K18870710     0.0
+:[K[K18870711     0.0
+:[K[K18870712     0.0
+:[K[K18870713    10.2
+:[K[K18870714    51.3
+:[K[K18870715    41.1
+:[K[K18870716     0.3
+:[K[K18870717     0.0
+:[K[K18870718     0.0
+:[K[K18870719     0.0
+:[K[K18870720     0.0
+:[K[K18870721     0.0
+:[K[K18870722     0.0
+:[K[K18870723     0.0
+:[K[K18870724     0.0
+:[K[K18870725     0.0
+:[K[K18870726     0.0
+:[K[K18870727     0.0
+:[K[K18870728     0.0
+:[K[K18870729     0.0
+:[K[K18870730     0.0
+:[K[K18870731     0.0
+:[K[K18870801     0.0
+:[K[K18870802     0.0
+:[K[K18870803     0.3
+:[K[K18870804     0.0
+:[K[K18870805     0.0
+:[K[K18870806     0.0
+:[K[K18870807     0.0
+:[K[K18870808     5.3
+:[K[K18870809     0.0
+:[K[K18870810     0.0
+:[K[K18870811     1.0
+:[K[K18870812    36.1
+:[K[K18870813    67.8
+:[K[K18870814     0.3
+:[K[K18870815     6.1
+:[K[K18870816     0.0
+:[K[K18870817     0.0
+:[K[K18870818     0.0
+:[K[K18870819     0.0
+:[K[K18870820     0.0
+:[K[K18870821     0.0
+:[K[K18870822     1.0
+:[K[K18870823     0.0
+:[K[K18870824     0.0
+:[K[K18870825     0.0
+:[K[K18870826     0.8
+:[K[K18870827     0.5
+:[K[K18870828     0.0
+:[K[K18870829     0.0
+:[K[K18870830     0.0
+:[K[K18870831     3.6
+:[K[K18870901     0.0
+:[K[K18870902     3.6
+:[K[K18870903     0.0
+:[K[K18870904     0.0
+:[K[K18870905     0.0
+:[K[K18870906     0.0
+:[K[K18870907     0.0
+:[K[K18870908     0.0
+:[K[K18870909     0.0
+:[K[K18870910     0.0
+:[K[K18870911     0.0
+:[K[K18870912     4.3
+:[K[K18870913    48.3
+:[K[K18870914     0.0
+:[K[K18870915     3.0
+:[K[K18870916     0.0
+:[K[K18870917     0.0
+:[K[K18870918     0.0
+:[K[K18870919     0.0
+:[K[K18870920     5.1
+:[K[K18870921     0.5
+:[K[K18870922     3.6
+:[K[K18870923     0.0
+:[K[K18870924     0.0
+:[K[K18870925     1.5
+:[K[K18870926     0.0
+:[K[K18870927     0.0
+:[K[K18870928    14.7
+:[K[K18870929     0.0
+:[K[K18870930     0.8
+:[K[K18871001     0.0
+:[K[K18871002     0.0
+:[K[K18871003     0.0
+:[K[K18871004     0.3
+:[K[K18871005     0.0
+:[K[K18871006     0.5
+:[K[K18871007     2.3
+:[K[K18871008     0.0
+:[K[K18871009     0.0
+:[K[K18871010     0.0
+:[K[K18871011     1.5
+:[K[K18871012     0.0
+:[K[K18871013     0.0
+:[K[K18871014     0.0
+:[K[K18871015     0.0
+:[K[K18871016     0.0
+:[K[K18871017     0.0
+:[K[K18871018     0.0
+:[K[K18871019     0.0
+:[K[K18871020     0.0
+:[K[K18871021     0.0
+:[K[K18871022     0.0
+:[K[K18871023     0.0
+:[K[K18871024     0.0
+:[K[K18871025     0.0
+:[K[K18871026     0.0
+:[K[K18871027     0.0
+:[K[K18871028     0.5
+:[K[K18871029     1.3
+:[K[K18871030     0.0
+:[K[K18871031     0.0
+:[K[K18871101    13.5
+:[K[K18871102     0.5
+:[K[K18871103     0.0
+:[K[K18871104     0.0
+:[K[K18871105     0.0
+:[K[K18871106     0.0
+:[K[K18871107     0.0
+:[K[K18871108     1.3
+:[K[K18871109     9.1
+:[K[K18871110     1.0
+:[K[K18871111     2.3
+:[K[K18871112     0.0
+:[K[K18871113     0.0
+:[K[K18871114     0.0
+:[K[K18871115     0.0
+:[K[K18871116     0.3
+:[K[K18871117     0.0
+:[K[K18871118     0.0
+:[K[K18871119     0.8
+:[K[K18871120     2.8
+:[K[K18871121     0.0
+:[K[K18871122    18.8
+:[K[K18871123     8.1
+:[K[K18871124     0.5
+:[K[K18871125     0.0
+:[K[K18871126     0.0
+:[K[K18871127     0.0
+:[K[K18871128    16.3
+:[K[K18871129    18.3
+:[K[K18871130     2.5
+:[K[K18871201     0.0
+:[K[K18871202     2.0
+:[K[K18871203     1.0
+:[K[K18871204     0.0
+:[K[K18871205     0.0
+:[K[K18871206     0.0
+:[K[K18871207     0.0
+:[K[K18871208     0.0
+:[K[K18871209     0.0
+:[K[K18871210     0.0
+:[K[K18871211     0.8
+:[K[K18871212     1.0
+:[K[K18871213     1.0
+:[K[K18871214     0.0
+:[K[K18871215     0.0
+:[K[K18871216     0.0
+:[K[K18871217     0.0
+:[K[K18871218     0.0
+:[K[K18871219     0.0
+:[K[K18871220     0.0
+:[K[K18871221     0.0
+:[K[K18871222     2.0
+:[K[K18871223     8.4
+:[K[K18871224     0.8
+:[K[K18871225     0.0
+:[K[K18871226     0.0
+:[K[K18871227    10.7
+:[K[K18871228    25.9
+:[K[K18871229     6.9
+:[K[K18871230     0.5
+:[K[K:[K[K[K[7mDetermining length of file... (interrupt to abort)[27m[K[H[2J[HM18870417     5.1
+[HM18870416     0.3
+[HM18870415    47.5
+[HM18870414     1.3
+[HM18870413     0.0
+[HM18870412     2.5
+[HM18870411     2.0
+[HM18870410     2.5
+[HM18870409    10.9
+[HM18870408     8.6
+[HM18870407     2.0
+[HM18870406     0.5
+[HM18870405     5.8
+[HM18870404     7.6
+[HM18870403     0.0
+[HM18870402    19.1
+[HM18870401     0.0
+[HMPRCP       040043 18870401 20180209 missing_value=99999.9 CAPE MORETON LIGHTHOUSE                   
+[19;1H[K:[K[K18870418    85.9
+:[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[19;1H[K[K:[K[K[?1l>]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/datalaplace:data cd$ open .
+pwd
+/Users/cd/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls
+Untitled.Rmd			data				lib				ssa_notes.nb.html
+Untitled.nb.html		debug.R				rain_components.png		timeseries_pca_and_ssa.Rproj
+bibliography.bib		journal-of-combinatorics.csl	ssa_notes.Rmd			timeseries_pca_capemoreton.png
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ git init
+Initialized empty Git repository in /Users/cd/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/.git/
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ git remote add origin https://github.com/cxd/notes_pca_ssa_timeseries.git
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ git pull origin master
+remote: Enumerating objects: 3, done.[K
+remote: Counting objects:  33% (1/3)   [Kremote: Counting objects:  66% (2/3)   [Kremote: Counting objects: 100% (3/3)   [Kremote: Counting objects: 100% (3/3), done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
+From https://github.com/cxd/notes_pca_ssa_timeseries
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls
+LICENSE				data				rain_components.png		timeseries_pca_capemoreton.png
+Untitled.Rmd			debug.R				ssa_notes.Rmd
+Untitled.nb.html		journal-of-combinatorics.csl	ssa_notes.nb.html
+bibliography.bib		lib				timeseries_pca_and_ssa.Rproj
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ git add .
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls -a
+.				.Rproj.user			bibliography.bib		rain_components.png
+..				.git				data				ssa_notes.Rmd
+.DS_Store			LICENSE				debug.R				ssa_notes.nb.html
+.RData				Untitled.Rmd			journal-of-combinatorics.csl	timeseries_pca_and_ssa.Rproj
+.Rhistory			Untitled.nb.html		lib				timeseries_pca_capemoreton.png
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ gir [K[Kt rm .RData
+error: the following file has changes staged in the index:
+    .RData
+(use --cached to keep the file, or -f to force removal)
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ git rm .RData0.RDataf.RData .RData[1P.RData[1P.RData[1P.RData-.RDataf.RData .RData
+rm '.RData'
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ ls
+LICENSE				data				rain_components.png		timeseries_pca_capemoreton.png
+Untitled.Rmd			debug.R				ssa_notes.Rmd
+Untitled.nb.html		journal-of-combinatorics.csl	ssa_notes.nb.html
+bibliography.bib		lib				timeseries_pca_and_ssa.Rproj
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ lsgit rm -f .RData
+fatal: pathspec '.RData' did not match any files
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ git rm -f .RData[Kls
+LICENSE				data				rain_components.png		timeseries_pca_capemoreton.png
+Untitled.Rmd			debug.R				ssa_notes.Rmd
+Untitled.nb.html		journal-of-combinatorics.csl	ssa_notes.nb.html
+bibliography.bib		lib				timeseries_pca_and_ssa.Rproj
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ git [K[K[K[Kls -a
+.				.git				data				ssa_notes.Rmd
+..				LICENSE				debug.R				ssa_notes.nb.html
+.DS_Store			Untitled.Rmd			journal-of-combinatorics.csl	timeseries_pca_and_ssa.Rproj
+.Rhistory			Untitled.nb.html		lib				timeseries_pca_capemoreton.png
+.Rproj.user			bibliography.bib		rain_components.png
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ r[Kgi [Kt rm -f .Rhsto[K[K[Kuist[K[K[K[Kistory
+rm '.Rhistory'
+]0;~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssalaplace:timeseries_pca_and_ssa cd$ git push origin [K[K[K[K[K[K[K[K[K[K[K[Kcommit -m "initial" -a

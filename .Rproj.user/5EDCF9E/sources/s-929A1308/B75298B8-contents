@@ -1,0 +1,8 @@
+@book{jolliffe,
+  title = {Principle Component Analysis},
+  author = {{Jolliffe I. T.}},
+  edition = {Second Edition},
+  publisher = {Springer Series in Statistics},
+  address = {New York},
+  year = {2002}
+}

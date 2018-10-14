@@ -1,0 +1,6 @@
+---
+title: "Notes o Single Spectrum Analysis usine PCA on Timeseries"
+output: html_notebook
+---
+
+Notes on single spectrum analysis (SSA) are drawn from the book by Joliffe "Principal Component Analysis 2ed".

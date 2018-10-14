@@ -1,0 +1,1 @@
+"0","df <- data.frame(comp=1:length(percentVar), percent=percentVar, cumpercent=cumsum(percentVar))"

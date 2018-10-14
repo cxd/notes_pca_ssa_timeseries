@@ -1,0 +1,191 @@
+---
+title: "Notes o Single Spectrum Analysis usine PCA on Timeseries"
+output: html_notebook
+nocite: |
+  @jolliffe
+csl: journal-of-combinatorics.csl
+bibliography: bibliography.bib
+---
+
+```{r}
+source("lib/precp_data.R")
+
+```
+
+Notes on single spectrum analysis (SSA) are drawn from the book by Joliffe "Principal Component Analysis 2ed". @jolliffe
+
+The SSA is an application of PCA on a lagged timeseries for a single variable $X$ the lags are defined as
+
+$$
+x_t, x_{t+1}, \cdots, x_{t+p-1}
+$$
+
+where $p$ represents the window of the time lag. A matrix is constructed of the time lags, and the principle component analysis is performed on the matrix of dimension $n-p + 1$ rows and $p$ columns.
+The resulting eigenvectors after the principle component decomposition are trigonometrics functions, also known as "Empricial Orthogonal Functions" EOFs. 
+
+Jolliffe indicates the following properties for the derived principle components and eigenvalues.
+
+1. Principle Components are moving averages of the time series.
+2. The Eigenvectors (EOFs) provide the weights of the moving averages.
+3. The SSA for a timeseries with an oscillatory component, has an associated pair of EOFs with identifical eigenvalues. Coefficients of the EOFs (the eigenvectors) have the same oscillatory pattern but are $\frac{\pi}{2}$ out of phase with each other. @jolliffe
+
+The application of SSA is to determine the dominant periodicities in a series. However, statistical significance tests need to determine whether the periods are due to signal or noise (commonly referred to as red noise). Such inference processes depende on a monte carlo test.
+
+The following example makes use of sensor readings for precipitation made available by the Australian Bureau of Meterology available at http://www.bom.gov.au/climate/change/datasets/datasets.shtml.
+
+For this example the site "CAPE MORETON LIGHTHOUSE" sensor "040043" was selected to obtain the univariate timeseries readings of daily rainfall (millimeters) for the date range starting at 01-01-1888 until 09-02-2018. The data was preprocessed prior to generating the principle components (for an example of reading all sensor data for all stations refer to the "debug.R" script in the git repository for this notebook).
+
+The initial step is to load the preprocessed time series.
+```{r}
+series <- read.csv("data/example_cape_moreton.csv", stringsAsFactors = FALSE)
+series$date <-  as.POSIXct(strptime(series$date,"%Y-%m-%d"))
+idx <- !is.nan(series$precip)
+## Need to start the series from January 1888 to start "at the "zero" the time series.
+series <- series[series$date >= "1888-01-01",]
+
+nullids <- which(is.na(series))
+
+series <- series[!is.nan(series$precip),]
+series <- series[!is.na(series$precip),]
+
+str(series)
+summary(series)
+```
+Reviewing a subset of the series, say from 2000 onwards, to get an idea of the data.
+
+```{r}
+subset <- series[series$date > "2000-01-01",]
+plot(subset$precip ~ subset$date, ylab="daily rain", xlab="date", pch=18)
+
+```
+
+Note there was also a period where the sensor must have been offline, somewhere prior to 2015. The missing sensor data would need to be somehow accounted for in the signal, in this example, there has not been any treatment of the missing sensor data, however it may be necessary to perform multiple separate analysis over several regions of the time series where sensor data is available. Over the series there does appear to be a set of peaks, although in this plot these are not clear. 
+
+
+The next step is to lag the data over a period of 365 days, note for the sake of this example the missing data has been dealt discard. But no further checks for missing data has been carried out, so in a more serious analysis, this does require attention, as the sequence of samples needs to be consistent over the time range).
+
+```{r}
+sequence <- series$precip[!is.nan(series$precip)]
+M <- slidingMatrix(sequence, 365)
+dim(M)
+```
+
+The principle component analysis is performed on the lagged matrix.
+
+```{r}
+M.pc <- princomp(M)
+```
+
+The percentage of variation explained for each principle component is plotted.
+
+```{r}
+
+## We seek the percentage of variance to determine the amount of variation explained
+## by each respective component within the time series.
+percentVar <- M.pc$sdev^2/(sum(M.pc$sdev^2))
+
+barplot(percentVar, names.arg=paste("PC", 1:length(percentVar), sep=""), main="Percent Variation Explained per Component")
+
+df <- data.frame(comp=1:length(percentVar), percent=percentVar, cumpercent=cumsum(percentVar))
+
+```
+
+```{r}
+df
+```
+
+Note that the percent of accumulated variance explained by the first three components is only 3 percent. This is quite low, perhaps it is expected given the high amount of variability in the data set.
+
+The eigenvectors associated with the highest three principle components are selected, as well as their combination and plotted over the timerange of the window to show the oscillations of the top three components.
+
+```{r, fig.width=8, fig.height=5}
+
+## The eigen vectors provide the periods of oscillation associated with the 
+ev1 <- M.pc$loadings[,1]
+ev2 <- M.pc$loadings[,2]
+ev3 <- M.pc$loadings[,3]
+
+sumEv <- ev1 + ev2 + ev3
+
+ylimits <- c(min(ev1,ev2,ev3, sumEv), max(ev1,ev2,ev3, sumEv))
+
+plot(ev1, type="l", col="blue", 
+     ylim=ylimits,
+     xlim=c(-70,400),
+     xlab="Lag Days (365 days per window)",
+     ylab="EOF",
+     main=paste("EOFs oscillations in Rainfall (Cape Moreton)", strftime(min(series$date), "%b %Y"), "to", strftime(max(series$date), "%b %Y")))
+grid(col = "lightgray", lty = "dotted",
+     lwd = par("lwd"), equilogs = TRUE)
+lines(ev2, col="red")
+lines(ev3, col="green")
+lines(sumEv)
+legend("bottomleft", lty=c(1,1,1), col=c("blue", "red", "green", "black"), legend=c("C1","C2","C3", "Sum"))
+```
+
+Note the first two components indeed refect trigonometric functions both slightly out of phase with each other. This is illustrated below with two example overlapping sin functions, $-sin(x)$ and $-sin(x+\frac{\pi}{2})$ over the range $[-\pi, \pi]$. 
+
+```{r, fig.width=4, fig.height=3}
+x <- seq(from=-pi, to=pi, by=0.1)
+plot(x, -sin(x), col="blue", type="l")
+lines(x, -sin(x+pi/2), col="red")
+```
+The first two eigenvectors as indicated by the first two eigenvalues in the PCA represent the most influential oscillations in the data set. The period of the oscillation (between higher and lower levels of rain) being approximately 200 days. Aside from this, the seasonality of the oscillation loosely reflects summary in the early and latter part of the year which does tend to have alot more rainfall in the region than winter.
+
+The plot below displays the first two projections of principle components for the years 1990, 1991, 1992 and 1993. The variability of the signal overlaps between the first two projections, although it is difficult to determine whether this variation cycles with any periodicity.
+
+```{r, fig.width=8, fig.height=8}
+subset <- series$date[!is.nan(series$precip)]
+idx1 <- which(subset >= "1990-01-01")
+idx2 <- which(subset <= "1990-12-31")
+idx <- intersect(idx1, idx2)
+pc1 <- M.pc$scores[idx,1]
+s1 <-  M.pc$scores[idx,2]
+delta1 <- pc1-s1
+par.old <- par(mfrow=c(4,1))
+#xlimits <- c(min(series[idx,]$date), max(series[idx,]$date))
+plot(pc1, col="blue", type="l", main="1990")
+lines(s1, col="lightblue")
+
+idx1 <- which(subset >= "1991-01-01")
+idx2 <- which(subset <= "1991-12-31")
+idx <- intersect(idx1, idx2)
+pc1a <- M.pc$scores[idx,1]
+s1 <-  M.pc$scores[idx,2]
+delta2 <- pc1a-s1
+plot(pc1a, col="blue", type="l", main="1991")
+lines(s1, col="lightblue")
+
+idx1 <- which(subset >= "1992-01-01")
+idx2 <- which(subset <= "1992-12-31")
+idx <- intersect(idx1, idx2)
+pc1a <- M.pc$scores[idx,1]
+s1 <-  M.pc$scores[idx,2]
+delta3 <- pc1a-s1
+
+plot(pc1a, col="blue", type="l", main="1992")
+lines(s1, col="lightblue")
+
+
+idx1 <- which(subset >= "1993-01-01")
+idx2 <- which(subset <= "1993-12-31")
+idx <- intersect(idx1, idx2)
+pc1a <- M.pc$scores[idx,1]
+s1 <-  M.pc$scores[idx,2]
+delta4 <- pc1a-s1
+
+plot(pc1a, col="blue", type="l", main="1993")
+lines(s1, col="lightblue")
+
+par(par.old)
+```
+
+
+The question is whether these oscillations are due to signal within the data, or whether it is simply a result of noise.
+
+The autocorrelation measure for the series is given as:
+
+```{r, fig.height=5, fig.width=8}
+autoC <- acf(sequence, lag.max=365)
+```
+

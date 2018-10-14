@@ -1,0 +1,7 @@
+"0","idx1 <- which(subset >= ""1992-01-01"")"
+"0","idx2 <- which(subset <= ""1992-12-31"")"
+"0","idx <- intersect(idx1, idx2)"
+"0","pc1a <- M.pc$scores[idx,1]"
+"0","s1 <-  M.pc$scores[idx,2]"
+"0","delta3 <- pc1a-s1"
+"0","plot(pc1a, col=""blue"", type=""l"", main=""1992"")"

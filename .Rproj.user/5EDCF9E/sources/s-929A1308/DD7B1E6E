@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539428785161.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DD7B1E6E",
+    "lastKnownWriteTime" : 1539496771,
+    "last_content_update" : 1539496771880,
+    "path" : "~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/debug.R",
+    "project_path" : "debug.R",
+    "properties" : {
+        "cursorPosition" : "37,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

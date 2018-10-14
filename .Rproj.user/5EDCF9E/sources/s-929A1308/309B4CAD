@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539430571146.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "309B4CAD",
+    "lastKnownWriteTime" : 1539477320,
+    "last_content_update" : 1539477320,
+    "path" : "~/Projects/RStudio/timeseries_pca_and_ssa/timeseries_pca_and_ssa/data/HQDR_stations.txt",
+    "project_path" : "data/HQDR_stations.txt",
+    "properties" : {
+        "cursorPosition" : "0,25",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}

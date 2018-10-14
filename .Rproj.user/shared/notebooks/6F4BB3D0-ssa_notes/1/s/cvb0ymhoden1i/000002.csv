@@ -1,0 +1,2 @@
+"0","x <- seq(from=-pi, to=pi, by=0.1)"
+"0","plot(x, -sin(x), col=""blue"", type=""l"")"

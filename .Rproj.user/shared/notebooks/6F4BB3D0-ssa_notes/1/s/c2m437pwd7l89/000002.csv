@@ -1,0 +1,2 @@
+"0","subset <- series[series$date > ""2000-01-01"",]"
+"0","plot(subset$precip ~ subset$date, ylab=""daily rain"", xlab=""date"", pch=18)"
