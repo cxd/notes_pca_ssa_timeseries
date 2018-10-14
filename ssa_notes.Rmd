@@ -1,9 +1,11 @@
 ---
 title: "Notes o Single Spectrum Analysis usine PCA on Timeseries"
-output: html_notebook
+csl: journal-of-combinatorics.csl
 nocite: |
   @jolliffe
-csl: journal-of-combinatorics.csl
+output:
+  pdf_document: default
+  html_notebook: default
 bibliography: bibliography.bib
 ---
 

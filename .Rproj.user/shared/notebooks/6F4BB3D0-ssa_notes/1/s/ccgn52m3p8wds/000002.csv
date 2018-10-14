@@ -1,4 +1,0 @@
-"0","## We seek the percentage of variance to determine the amount of variation explained"
-"0","## by each respective component within the time series."
-"0","percentVar <- M.pc$sdev^2/(sum(M.pc$sdev^2))"
-"0","barplot(percentVar, names.arg=paste(""PC"", 1:length(percentVar), sep=""""), main=""Percent Variation Explained per Component"")"
