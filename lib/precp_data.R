@@ -88,13 +88,12 @@ slidingMatrix <- function(sequence, p=1) {
   # new number of rows
   n2 <- length(sequence) - p + 1
   nextSeq <- sapply(1:n2, function(i) {
-    k <- i
-    if (k > p) {
-      k <- k - p + 1
-    }
-    sequence[k]
+    sapply(1:p, function(j) {
+      k <- i+j-1
+      sequence[k]
+    })
   })
+  nextSeq <- unlist(nextSeq, recursive=F)
   m <- matrix(nextSeq, nrow=n2, ncol=p, byrow=TRUE)
   as.matrix(m)
 }
-
